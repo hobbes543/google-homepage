@@ -1,5 +1,48 @@
-header body {
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 20px;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: "header-right header-left ."
+                         "main main main"
+                         "footer-right footer-left .";
+}
+
+body {
     background-color: white;
+}
+
+
+.header-right {
+    grid-area: header-right;
+    justify-self: start;
+    align-self: center;
+}
+
+.header-left {
+    grid-area: header-left;
+    justify-self: end;
+    align-self: center;
+}
+
+.main {
+    height: 800px;
+    grid-area: main;
+    justify-self: center;
+    align-self: center;
+}
+
+.footer-right {
+    grid-area: footer-right;
+    justify-self: start;
+    align-self: center;
+}
+
+.footer-left {
+    grid-area: footer-left;
+    justify-self: end;
+    align-self: center;
 }
 
 
